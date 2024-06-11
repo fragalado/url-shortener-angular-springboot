@@ -1,0 +1,36 @@
+<div class="text-center mx-auto py-5 contenedor">
+    <h1 class="mb-5 lxgw-wenkai-tc-regular" style="border-bottom: 1px solid black; width: fit-content; margin: 0 auto;">
+        URL Shortener
+    </h1>
+
+    <form class="p-1" [formGroup]="form" (submit)="send()">
+        <div class="row">
+            <div class="col-12 col-lg-10">
+                <input type="text" class="form-control inputForm" id="inputForm"
+                    placeholder="https://example.com/DWADhfgidshfi4" formControlName="url">
+            </div>
+            <div class="col-12 col-lg-2 divConvert">
+                <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Convert</button>
+            </div>
+            <div class="col-12" *ngIf="noUrl">
+                <div class="alert alert-danger mx-auto mt-3" style="max-width: 300px;" role="alert">
+                    You need to enter a URL!!
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="row mt-5" *ngIf="shortUrl">
+        <div class="col-12">
+            <div class="mx-auto" style="max-width: 300px;">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control inputForm" id="inputForm" [(ngModel)]="shortUrl"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="copyToClipboard()">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.colorTexto {
+    color: #000000;
+}
+
+.inputForm {
+    border: 1px solid black;
+}
+
+.contenedor {
+    max-width: 65%;
+    margin-top: 150px;
+}
+
+.lxgw-wenkai-tc-regular {
+    font-family: "LXGW WenKai TC", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+@media (max-width: 768px) {
+    .contenedor {
+        max-width: 90%;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .divConvert {
+        margin-top: 10px;
+    }
+}
